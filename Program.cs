@@ -10,7 +10,11 @@ namespace OOP_cv6
     {
         static void Main(string[] args)
         {
-            GrObject[] Objects = new GrObject[] { new Circle(10) };
+            GrObject[] Objects = new GrObject[] 
+            { 
+                new Circle(10), new Rectangle(10, 5), new Ellipse(10, 5), new Triangle(10, 10, 14.14), 
+                new Cube(10, 5, 2), new Cylinder(10, 5), new Sphere(10), new Pyramid(5, 10, 2)
+            };
             foreach (GrObject CurrentObject in Objects)
             {
                 CurrentObject.Draw();

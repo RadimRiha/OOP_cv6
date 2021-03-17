@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace OOP_cv6
 {
-    class Ellipse
+    public class Ellipse : Object2D
     {
+        public double RadiusA { get; private set; }
+        public double RadiusB { get; private set; }
+        public Ellipse(double radiusA, double radiusB)
+        {
+            RadiusA = radiusA;
+            RadiusB = radiusB;
+        }
+        public override void Draw()
+        {
+            Console.WriteLine("Ellipse (ra = {0}, rb = {1})", RadiusA, RadiusB);
+        }
+        public override double CalculateArea()
+        {
+            return Math.PI * RadiusA * RadiusB;
+        }
     }
 }
