@@ -12,6 +12,7 @@ namespace OOP_cv6
         public double Height { get; private set; }
         public Rectangle(double width, double height)
         {
+            if (width < 0 || height < 0) throw new Exception("Cannot create object with negative dimensions");
             Width = width;
             Height = height;
         }

@@ -12,6 +12,7 @@ namespace OOP_cv6
         public double RadiusB { get; private set; }
         public Ellipse(double radiusA, double radiusB)
         {
+            if (radiusA < 0 || radiusB < 0) throw new Exception("Cannot create object with negative dimensions");
             RadiusA = radiusA;
             RadiusB = radiusB;
         }

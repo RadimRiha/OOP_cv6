@@ -11,6 +11,7 @@ namespace OOP_cv6
         public double Radius { get; private set; }
         public Circle(double radius)
         {
+            if (radius < 0) throw new Exception("Cannot create object with negative dimensions");
             Radius = radius;
         }
         public override void Draw()

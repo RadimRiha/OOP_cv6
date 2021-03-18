@@ -13,6 +13,8 @@ namespace OOP_cv6
         public double SideC { get; private set; }
         public Triangle(double sideA, double sideB, double sideC)
         {
+            if (sideA < 0 || sideB < 0 || sideC < 0) throw new Exception("Cannot create object with negative dimensions");
+            if (sideA + sideB < sideC || sideB + sideC < sideA || sideC + sideA < sideB) throw new Exception("This triangle cannot exist");
             SideA = sideA;
             SideB = sideB;
             SideC = sideC;

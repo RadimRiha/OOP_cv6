@@ -13,6 +13,8 @@ namespace OOP_cv6
         public double Height { get; private set; }
         public Pyramid(int numberOfSides, double sideLength, double height)
         {
+            if (sideLength < 0 || height < 0) throw new Exception("Cannot create object with negative dimensions");
+            if (numberOfSides < 3) throw new Exception("Cannot construct pyramid with less than 3 sides");
             NumberOfSides = numberOfSides;
             SideLength = sideLength;
             Height = height;

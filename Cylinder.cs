@@ -12,6 +12,7 @@ namespace OOP_cv6
         public double BaseRadius { get; private set; }
         public Cylinder(double height, double baseRadius)
         {
+            if (height < 0 || baseRadius < 0) throw new Exception("Cannot create object with negative dimensions");
             Height = height;
             BaseRadius = baseRadius;
         }

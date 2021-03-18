@@ -13,6 +13,7 @@ namespace OOP_cv6
         public double Depth { get; private set; }
         public Cube(double width, double height, double depth)
         {
+            if (width < 0 || height < 0 || depth < 0) throw new Exception("Cannot create object with negative dimensions");
             Width = width;
             Height = height;
             Depth = depth;
